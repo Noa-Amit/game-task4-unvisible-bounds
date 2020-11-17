@@ -4,12 +4,21 @@
 
 You can see in the left side that the laser and enemies doesn't pass the frame of the camera.
  
-For this game we used a scene from class. We added prefab named "Limit" 
-
-https://github.com/Noa-Amit/game-task4-unvisible-bounds/blob/main/Assets/Prefabs/Limit.prefab
-
-Limit has collider, rigidbody and script "DestroyOtherOnTrigger" that destroy the object that hit him (the limit itself doesnt destroyed).
-
-https://github.com/Noa-Amit/game-task4-unvisible-bounds/blob/main/Assets/Scripts/3-collisions/DestroyOtherOnTrigger.cs
-
-In the game we put 2 Limits, upLimit that destroy laser and downLimit that distroy enemies.
+ The game has 3 main objects:
+ 
+   1. player- has collider and rigidbody. Player also has a scripts that made him move, killed when it hit enemy, and shoot laser.
+      https://github.com/Noa-Amit/game-task4-unvisible-bounds/blob/main/Assets/Scripts/1-movers/KeyboardMover.cs
+      
+      https://github.com/Noa-Amit/game-task4-unvisible-bounds/blob/main/Assets/Scripts/3-collisions/DestroyOnTrigger2D.cs
+      
+      https://github.com/Noa-Amit/game-task4-unvisible-bounds/blob/main/Assets/Scripts/2-spawners/LaserShooter.cs
+      
+   
+   2. enemySpawner- a prefab that spawn the enemies.
+     https://github.com/Noa-Amit/game-task4-unvisible-bounds/blob/main/Assets/Prefabs/EnemySpawner.prefab
+   
+   3. Limit- a prefab that has collider and rigidbody. When a specific object trigger the limit, limit destroy it.
+     https://github.com/Noa-Amit/game-task4-unvisible-bounds/blob/main/Assets/Prefabs/Limit.prefab
+     The script https://github.com/Noa-Amit/game-task4-unvisible-bounds/blob/main/Assets/Scripts/3-collisions/DestroyOtherOnTrigger.cs
+     
+     we put 2 limites in the game. The up limit destroy laser and the down limit destroy enemy.
